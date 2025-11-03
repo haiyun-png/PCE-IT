@@ -23,15 +23,15 @@
             <form id="todo-form">
                 <div class="form-group">
                     <label for="todo-name">Judul:</label>
-                    <input type="text" id="todo-name" required placeholder="Contoh: ulangan listening">
+                    <input type="text" id="todo-name" name="todo-name" required placeholder="Contoh: ulangan listening">
                 </div>
                 <div class="form-group">
                     <label for="todo-description">Deskripsi:</label>
-                    <textarea id="todo-description" required placeholder="Detail tugas..."></textarea>
+                    <textarea id="todo-description" name="todo-description" required placeholder="Detail tugas..."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="todo-deadline">Deadline:</label>
-                    <input type="date" id="todo-deadline" required>
+                    <input type="date" id="todo-deadline" name="todo-deadline" required>
                 </div>
                 <button type="submit" class="btn primary">Tambahkan</button>
             </form>
