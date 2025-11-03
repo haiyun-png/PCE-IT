@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <h1>✨ I Can Do It ✨</h1>
+        <nav>
+            <button class="nav-btn" data-view="list-view">📋 Daftar Tugas</button>
+            <button class="nav-btn" data-view="add-task-view">➕ Tambah Tugas Baru</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="add-task-view" class="view card active"> 
+            <h2>➕ Tambah Tugas Baru</h2>
+            <form id="todo-form">
+                <div class="form-group">
+                    <label for="todo-name">Judul:</label>
+                    <input type="text" id="todo-name" required placeholder="Contoh: ulangan listening">
+                </div>
+                <div class="form-group">
+                    <label for="todo-description">Deskripsi:</label>
+                    <textarea id="todo-description" required placeholder="Detail tugas..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="todo-deadline">Deadline:</label>
+                    <input type="date" id="todo-deadline" required>
+                </div>
+                <button type="submit" class="btn primary">Tambahkan</button>
+            </form>
+        </section>
+
+        <section id="list-view" class="view hidden">
+            <h3>📋 Daftar Tugas</h3>
+            
+            <div class="search-group card">
+                <label for="search-input">Cari Tugas:</label>
+                <input type="text" id="search-input" placeholder="Ketik judul untuk mencari...">
+            </div>
+
+            <div id="todo-list" class="todo-grid">
+                </div>
+
+            <p id="empty-message" class="hidden"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
